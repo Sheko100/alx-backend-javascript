@@ -4,7 +4,7 @@ export default function handleProfileSignup() {
   const createPrms = createUser();
   const upldPrms = uploadPhoto();
 
-  Promise.all([createPrms, upldPrms])
+  return Promise.all([createPrms, upldPrms])
     .then((response) => {
       const name = response[0];
       const resObj = response[1];
