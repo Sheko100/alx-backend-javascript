@@ -10,7 +10,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       const res = { status: null, value: null };
       res.status = result.status;
       if ('reason' in result) {
-        res.value = result.reason;
+        res.value = `Error: ${result.reason.message}`;
       } else {
         res.value = result.value;
       }
