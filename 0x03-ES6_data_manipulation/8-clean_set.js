@@ -1,9 +1,9 @@
 export default function cleanSet(set, startString) {
-  /*let str = '';
+  let str = '';
   const strArr = [];
 
-  if (startString === '') {
-    return;
+  if (startString === '' || startString === ' ') {
+    return str;
   }
 
   set.forEach((val) => {
@@ -12,5 +12,5 @@ export default function cleanSet(set, startString) {
     }
   });
   str = strArr.join('-');
-  return str;*/
+  return str;
 }
