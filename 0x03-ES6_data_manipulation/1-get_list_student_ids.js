@@ -1,5 +1,5 @@
 export default function getListStudentIds(stdntsArr) {
-  let ids = {};
+  let ids = [];
 
   if (Array.isArray(stdntsArr)) {
     ids = stdntsArr.map((stdnt) => stdnt.id);
