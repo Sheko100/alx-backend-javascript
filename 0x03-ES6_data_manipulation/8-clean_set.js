@@ -1,5 +1,5 @@
 export default function cleanSet(set, startString) {
-  let str = '';
+  /*let str = '';
   const strArr = [];
 
   if (startString === '') {
@@ -12,5 +12,5 @@ export default function cleanSet(set, startString) {
     }
   });
   str = strArr.join('-');
-  return str;
+  return str;*/
 }
