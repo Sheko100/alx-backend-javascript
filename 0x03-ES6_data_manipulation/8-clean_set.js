@@ -3,7 +3,7 @@ export default function cleanSet(set, startString) {
   const strArr = [];
 
   if (startString === '') {
-    return str;
+    return;
   }
 
   set.forEach((val) => {
