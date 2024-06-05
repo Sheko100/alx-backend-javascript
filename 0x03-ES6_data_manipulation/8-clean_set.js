@@ -7,7 +7,7 @@ export default function cleanSet(set = new Set(), startString = '') {
   }
 
   set.forEach((val) => {
-    if (val.startsWith(startString)) {
+    if (val && val.startsWith(startString)) {
       strArr.push(val.slice(startString.length));
     }
   });
