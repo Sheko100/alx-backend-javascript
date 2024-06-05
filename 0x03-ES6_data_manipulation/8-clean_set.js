@@ -1,14 +1,17 @@
-export default function cleanSet(set=new Set(), startString='') {
+export default function cleanSet(set = new Set(), startString = '') {
   let str = '';
   const strArr = [];
 
-  if (startString.length > 0 && set.size > 0) {
-    set.forEach((val) => {
-      if (val.startsWith(startString)) {
-        strArr.push(val.slice(startString.length));
-      }
-    });
-    str = strArr.join('-');
+  if (!(set instanceof Set) || (startString.length < 1 || set.size < 1)) {
+    return str;
   }
+
+  set.forEach((val) => {
+    if (val.startsWith(startString)) {
+      strArr.push(val.slice(startString.length));
+    }
+  });
+  str = strArr.join('-');
+
   return str;
 }
