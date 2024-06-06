@@ -68,5 +68,16 @@ function executeWork(employee: DirectorInterface | TeacherInterface) {
   console.log(work());
 }
 
-executeWork(createEmployee(200));
-executeWork(createEmployee(1000));
+type subjects = 'Math' | 'History';
+
+function teachClass(todayClass: subjects): string {
+  let msg = '';
+
+  if (todayClass === 'Math') {
+    msg = 'Teaching Math';
+  } else if (todayClass === 'History') {
+    msg = 'Teaching History';
+  }
+
+  return msg;
+}
