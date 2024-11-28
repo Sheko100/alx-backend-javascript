@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const calculateNumber = require('./0-calcul.js');
+const calculateNumber = require('./1-calcul.js');
 const assert = require('assert');
 
 it('should return the sum of the round of a and the round of b', function () {
@@ -21,4 +21,10 @@ it('should return Error while dividing by 0', function () {
 
 it('should return 0 if there are no arguments passed', function () {
   assert.equal(calculateNumber(), 0);
+});
+
+it('should thow an error if the type value is not from the correct optoins', function () {
+  assert.throws(function () {
+    calculateNumber('LOL', 2.5, 3.5);
+  });
 });

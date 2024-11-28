@@ -19,6 +19,8 @@ function calculateNumber (type = 'SUM', a = 0, b = 0) {
         result = num1 / num2;
       }
       break;
+    default:
+      throw TypeError('type param value should be a string and one of the correct options');
   }
 
   return result;
